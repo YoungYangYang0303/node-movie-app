@@ -1,0 +1,302 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/styles/Home.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************/
+.Home_container__9OuOz {
+  min-height: 100vh;
+  padding: var(--spacing-lg) var(--spacing-lg); /* 上下改为 lg (24px)，保持左右 */
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.Home_main__2uIek {
+  min-height: 100vh;
+  /* 进一步减少顶部的内边距，甚至可以为0，因为 Navbar 已经占了空间 */
+  padding: 0 0 var(--spacing-lg); /* 顶部为0，底部保留一些间距 */
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  width: 100%; 
+}
+
+.Home_hero__g_og0 {
+  width: 100%; 
+  max-width: 1200px; 
+  /* 大幅减少垂直内边距 */
+  padding: var(--spacing-sm) var(--spacing-md); /* 上下 sm (8px)，左右 md (16px) */
+  text-align: center; 
+  /* 减少 hero 下方的间距，让电影列表更早出现 */
+  margin-bottom: var(--spacing-md); /* 从 lg 改为 md (16px) */
+}
+
+.Home_header__ZUWxe {
+  text-align: center;
+  margin-bottom: var(--spacing-lg); /* 从 xl 改为 lg */
+}
+
+.Home_title__YEn0u {
+  margin: 0;
+  line-height: 1.2; 
+  font-size: 2rem; /* 从 2.2rem 改为 2rem (32px) */
+  font-weight: 700;
+  color: var(--color-primary-text);
+  /* 减少标题下方的间距 */
+  margin-bottom: var(--spacing-xs); /* 保持 (4px) */
+}
+
+.Home_highlight__TZ0SE { 
+  color: var(--color-accent);
+}
+
+.Home_description__zHUB6 { 
+  font-size: 0.9rem; /* 从 1rem 改为 0.9rem (14.4px) */
+  color: var(--color-secondary-text);
+  /* 移除描述文本下方的间距，因为 .hero 已经有 margin-bottom */
+  margin-bottom: 0; 
+  line-height: 1.4; /* 从 1.5 改为 1.4 */
+  max-width: 550px; /* 从 600px 改为 550px */
+  margin-left: auto;   
+  margin-right: auto;
+}
+
+.Home_subtitle__Qob9A {
+  font-size: 1rem; /* 从 1.125rem 改为 1rem */
+  color: var(--color-secondary-text);
+  margin-bottom: var(--spacing-md); /* 从 lg 改为 md */
+}
+
+.Home_movieGrid__Hr1wc {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); 
+  grid-gap: var(--spacing-md); 
+  gap: var(--spacing-md); /* 从 lg 改为 md (16px) */
+  width: 100%;
+  max-width: 1200px; 
+  /* .main 已经有垂直 padding，这里不需要额外的 padding */
+}
+
+/* 新增或修改这个类，用于包裹电影卡片的 Link 组件 */
+.Home_movieCardLink__LfwWQ {
+  text-decoration: none !important; /* 移除默认和悬停时的下划线 */
+  color: inherit; /* 让链接颜色继承自卡片内部的文本颜色 */
+}
+
+/* 确保悬停状态也没有下划线 */
+.Home_movieCardLink__LfwWQ:hover {
+  text-decoration: none !important;
+}
+
+.Home_movieCard__Cal0u {
+  background: var(--color-surface);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--box-shadow-md);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  /* text-decoration: none; */ /* 这行对于 div 本身是好的，但不会影响其父 <a> 标签的下划线 */
+  cursor: pointer;
+  height: -moz-fit-content;
+  height: fit-content; /* 改为 fit-content 或 100% 取决于你的布局需求 */
+}
+
+.Home_movieCard__Cal0u:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+.Home_moviePoster__rCt3t {
+  width: 100%;
+  aspect-ratio: 2 / 3; /* 保持海报比例 */
+  overflow: hidden;
+  background-color: #e9ecef; /* 海报加载时的占位背景色 */
+}
+
+.Home_moviePoster__rCt3t img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 裁剪以适应容器 */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.Home_movieCard__Cal0u:hover .Home_moviePoster__rCt3t img {
+  transform: scale(1.03); /* 轻微放大效果 */
+}
+
+.Home_posterPlaceholder__gx33i {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-secondary-text);
+  font-size: 2.5rem;
+}
+
+.Home_movieInfo__ZBBvQ {
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* 让信息部分填充剩余空间 */
+}
+
+.Home_movieTitle__KMaEh {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+  color: var(--color-primary-text);
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.4;
+  /* 限制标题行数 */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: calc(1.4em * 2); /* 确保两行的高度 */
+}
+
+.Home_movieMeta__BcrCK {
+  margin-bottom: var(--spacing-sm);
+  font-size: 0.875rem; /* 14px */
+  color: var(--color-secondary-text);
+}
+
+.Home_movieYear__U_jOI, .Home_movieDirector__aGCIq, .Home_movieGenre__KWoS4 {
+  display: block; /* 或 inline-block with margin */
+  margin-bottom: var(--spacing-xs);
+}
+
+.Home_movieGenre__KWoS4 {
+  background-color: rgba(52, 152, 219, 0.1); /* 使用强调色的浅色背景 */
+  color: var(--color-accent);
+  padding: calc(var(--spacing-xs) / 2) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: 0.75rem; /* 12px */
+  font-weight: 500;
+  display: inline-block; /* 使其适应内容宽度 */
+}
+
+.Home_movieDescription__pt7mZ {
+  font-size: 0.875rem; /* 14px */
+  color: var(--color-secondary-text);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-md);
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* 限制描述行数 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1; /* 填充空间，将评分推到底部 */
+}
+
+.Home_movieRating__PfNua {
+  margin-top: auto; /* 将评分推到卡片底部 */
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--color-border);
+  font-size: 0.875rem;
+  color: var(--color-primary-text);
+  font-weight: 500;
+}
+
+.Home_ratingLabel__jrOX7 {
+  color: var(--color-secondary-text);
+}
+
+.Home_ratingScore__oleVc {
+  color: var(--color-primary-text);
+  font-weight: 600;
+}
+
+.Home_ratingScore__oleVc::before {
+  content: '⭐ '; /* 星星图标 */
+  color: #f1c40f; /* 金色星星 */
+}
+
+
+.Home_loading__fXh_b,
+.Home_error__w_26N {
+  text-align: center;
+  font-size: 1.125rem; /* 18px */
+  margin-top: var(--spacing-xl);
+  color: var(--color-secondary-text);
+}
+
+.Home_errorContainer__v7EUX {
+  text-align: center;
+  padding: var(--spacing-lg);
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-border);
+  margin: var(--spacing-xl) auto;
+  max-width: 600px;
+  box-shadow: var(--box-shadow-sm);
+}
+
+.Home_errorContainer__v7EUX h2 {
+  color: var(--color-error);
+  margin-bottom: var(--spacing-sm);
+}
+
+.Home_errorContainer__v7EUX .Home_error__w_26N {
+  color: var(--color-primary-text);
+  font-size: 1rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.Home_errorContainer__v7EUX .Home_errorHint__yW_6m {
+  color: var(--color-secondary-text);
+  font-size: 0.875rem;
+}
+
+/* 新增无数据时的样式 */
+.Home_noDataContainer__kH5aK {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-md); /* 从 2rem 改为 md (16px) */
+  margin: var(--spacing-lg) auto; /* 上下 lg (24px)，保持或按需调整 */
+  background-color: #f9f9f9; /* 浅灰色背景 */
+  border: 1px solid #e0e0e0; /* 细边框 */
+  border-radius: 8px; /* 圆角 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* 轻微阴影 */
+  max-width: 600px; /* 限制最大宽度 */
+  width: 90%; /* 响应式宽度 */
+}
+
+.Home_noDataContainer__kH5aK h2 {
+  font-size: 1.5rem; /* 从 1.8rem 改为 1.5rem */
+  color: #333; /* 深色标题 */
+  margin-bottom: var(--spacing-sm); /* 从 0.75rem 改为 sm (8px) */
+}
+
+.Home_noDataContainer__kH5aK p {
+  font-size: 0.9rem; /* 从 1rem 改为 0.9rem */
+  color: #666; /* 中灰色文本 */
+  line-height: 1.5; /* 从 1.6 改为 1.5 */
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .Home_movieGrid__Hr1wc {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--spacing-md);
+  }
+  .Home_title__YEn0u {
+    font-size: 2rem; /* 32px */
+  }
+}
+
+@media (max-width: 480px) {
+  .Home_movieGrid__Hr1wc {
+    grid-template-columns: 1fr; /* 单列显示 */
+    gap: var(--spacing-md);
+  }
+  .Home_container__9OuOz {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+}

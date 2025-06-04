@@ -1,0 +1,109 @@
+:root {
+  /* 色彩方案 */
+  --color-background: #f4f6f8; /* 非常浅的灰色背景 */
+  --color-surface: #ffffff;    /* 卡片、表面等的白色背景 */
+  --color-primary-text: #2c3e50; /* 主要文字颜色 - 深灰蓝 */
+  --color-secondary-text: #7f8c8d; /* 次要文字颜色 - 灰色 */
+  --color-accent: #3498db;      /* 强调色 - 现代蓝色 */
+  --color-accent-hover: #2980b9; /* 强调色悬停 */
+  --color-border: #e0e0e0;      /* 边框颜色 - 浅灰色 */
+  --color-error: #e74c3c;       /* 错误提示颜色 */
+  --color-success: #2ecc71;     /* 成功提示颜色 */
+
+  /* 字体 */
+  --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  
+  /* 布局与间距 */
+  --spacing-unit: 8px;
+  --spacing-xs: calc(var(--spacing-unit) * 0.5);  /* 4px */
+  --spacing-sm: var(--spacing-unit);             /* 8px */
+  --spacing-md: calc(var(--spacing-unit) * 2);   /* 16px */
+  --spacing-lg: calc(var(--spacing-unit) * 3);   /* 24px */
+  --spacing-xl: calc(var(--spacing-unit) * 4);   /* 32px */
+
+  /* 边框圆角 */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+
+  /* 阴影 (非常微妙) */
+  --box-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --box-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+
+  /* 最大宽度 */
+  --max-width: 1280px; 
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: var(--font-primary);
+  background-color: var(--color-background);
+  color: var(--color-primary-text);
+  line-height: 1.6;
+}
+
+body {
+  font-size: 16px; /* 基础字号 */
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: var(--spacing-md);
+  font-weight: 600; /* 现代字体通常不需要太粗的字重 */
+  line-height: 1.3;
+}
+
+h1 { font-size: 2.25rem; } /* 36px */
+h2 { font-size: 1.875rem; } /* 30px */
+h3 { font-size: 1.5rem; }  /* 24px */
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+main {
+  min-height: calc(100vh - 70px); /* 或 60px，取决于 Navbar 高度 */
+  /* 这里的 padding 可能会影响 Home.module.css 中的 .main 布局 */
+  /* 如果 Home.module.css 中的 .main 已经处理了左右内边距，这里可以只保留垂直的 */
+  /* 或者，如果希望所有页面的 main 都有统一的左右内边距，则保留 */
+  padding: 0 var(--spacing-lg); /* 上下为0 (因为 layout.js 和 Home.module.css 会处理)，左右保留 */
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* 移除旧的 .navbar, .nav-container 等全局样式，它们应该在 Navbar.module.css 中定义 */
+
+/* 滚动条样式 (可选) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+::-webkit-scrollbar-thumb {
+  background: #bdc3c7; /* 中灰色滚动条滑块 */
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #95a5a6; /* 稍深一点的灰色 */
+}
+
+/* 移除旧的 .movie-list, .movie-card 全局样式，它们应该在各自的模块 CSS 中定义 */

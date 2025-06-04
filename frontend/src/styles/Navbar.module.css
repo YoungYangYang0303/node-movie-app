@@ -1,0 +1,99 @@
+.navbar {
+  background-color: var(--color-surface);
+  padding: 0 var(--spacing-lg); /* 上下0，左右24px */
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  height: 60px; /* 例如，从 70px 改为 60px */
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--box-shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.75rem; /* 28px */
+  font-weight: 700; /* Logo 可以稍粗一些 */
+  color: var(--color-primary-text);
+  text-decoration: none;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg); /* 链接之间的间距 */
+}
+
+.navLinks a,
+.navLinks button { /* 统一链接和按钮样式 */
+  color: var(--color-secondary-text);
+  font-size: 1rem; /* 16px */
+  text-decoration: none !important; /* <--- 确保这里是 none，并使用 !important */
+  padding: var(--spacing-sm) 0; /* 上下内边距，让点击区域更大 */
+  position: relative;
+  transition: color 0.2s ease-in-out;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: var(--font-primary);
+}
+
+.navLinks a:hover,
+.navLinks button:hover {
+  color: var(--color-primary-text);
+  text-decoration: none !important; /* <--- 再次确保悬停时也没有文本下划线 */
+}
+
+.navLinks a::after,
+.navLinks button::after { /* 蓝色动画下划线 */
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-accent);
+  transition: width 0.3s ease-in-out;
+}
+
+.navLinks a:hover::after,
+.navLinks button:hover::after,
+.navLinks a.active::after, /* active 状态也显示下划线 */
+.navLinks button.active::after {
+  width: 100%;
+}
+
+.active {
+  color: var(--color-primary-text) !important; /* 确保覆盖默认颜色 */
+  font-weight: 600;
+  text-decoration: none !important; /* <--- Active 状态的链接本身也不要有文本下划线 */
+}
+
+.userInfo {
+  color: var(--color-secondary-text);
+  font-size: 0.9rem; /* 14.4px */
+  margin-right: var(--spacing-sm); /* 与登出按钮的间距 */
+}
+
+.logoutButton {
+  /* 样式已在 .navLinks button 中统一，这里可以添加特定微调 */
+  padding: var(--spacing-xs) var(--spacing-md) !important; /* 微调内边距 */
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-accent) !important;
+}
+
+.logoutButton:hover {
+  background-color: var(--color-accent);
+  color: var(--color-surface) !important;
+  border-color: var(--color-accent);
+}
+.logoutButton:hover::after { /* 登出按钮悬停时不需要蓝色动画下划线 */
+    width: 0;
+}

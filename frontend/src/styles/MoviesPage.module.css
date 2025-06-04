@@ -1,0 +1,53 @@
+/* filepath: frontend/src/styles/MoviesPage.module.css */
+.container {
+  padding: var(--spacing-lg, 24px); /* 使用 globals.css 中的变量或默认值 */
+  max-width: var(--max-width, 1280px);
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl, 32px);
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--color-primary-text, #2c3e50);
+  margin-bottom: var(--spacing-sm, 8px);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--color-secondary-text, #7f8c8d);
+}
+
+/* 错误、警告和无数据提示容器的通用样式 */
+.errorContainer,
+.warningContainer,
+.noDataContainer {
+  text-align: center;
+  padding: var(--spacing-xl, 32px);
+  margin: var(--spacing-xl, 32px) auto;
+  border-radius: var(--border-radius-md, 8px);
+  max-width: 600px;
+  border: 1px solid var(--color-border, #e0e0e0);
+}
+
+.errorContainer {
+  background-color: #ffebee; /* 示例：浅红色 */
+  color: #c62828;
+  border-color: #c62828;
+}
+.errorContainer h2 { color: #c62828; }
+
+.warningContainer {
+  background-color: #fffde7; /* 示例：浅黄色 */
+  color: #f57f17;
+  border-color: #f57f17;
+}
+.warningContainer h2 { color: #f57f17; }
+
+.noDataContainer {
+  background-color: var(--color-surface, #ffffff);
+}
+.noDataContainer h2 { color: var(--color-primary-text, #2c3e50); }

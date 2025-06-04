@@ -1,0 +1,121 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/styles/AuthForm.module.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************/
+.AuthForm_authContainer__zTsAs {
+  display: flex;
+  flex-direction: column; /* 新增此行 */
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-xl);
+  min-height: calc(100vh - 70px - var(--spacing-xl) * 2); /* 减去 Navbar 和上下 padding */
+}
+
+.AuthForm_authForm__8ZSco {
+  background-color: var(--color-surface);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow-md);
+  width: 100%;
+  max-width: 500px; /* 将此值从 420px 增加，例如改为 600px 或您希望的宽度 */
+  color: var(--color-primary-text);
+}
+
+.AuthForm_authForm__8ZSco h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-primary-text);
+  font-size: 1.75rem; /* 28px */
+}
+
+.AuthForm_inputGroup__bV5AV {
+  margin-bottom: var(--spacing-lg);
+}
+
+.AuthForm_inputGroup__bV5AV label {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 500;
+  font-size: 0.95rem; /* 从 0.9rem 调整，提高可读性 */
+  color: var(--color-secondary-text);
+}
+
+.AuthForm_inputField__VHndr {
+  width: 100%;
+  padding: var(--spacing-md); /* 16px 内边距 */
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--color-surface); /* 或 #fdfdfd 稍有区别 */
+  color: var(--color-primary-text);
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.AuthForm_inputField__VHndr:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2); /* 使用强调色的阴影 */
+}
+
+.AuthForm_submitButton__ziWRA {
+  width: 100%;
+  padding: var(--spacing-md);
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.AuthForm_submitButton__ziWRA:hover {
+  background-color: var(--color-accent-hover);
+}
+.AuthForm_submitButton__ziWRA:active {
+  transform: translateY(1px);
+}
+
+.AuthForm_submitButton__ziWRA:disabled {
+  background-color: #bdc3c7; /* 禁用时的灰色 */
+  cursor: not-allowed;
+}
+
+.AuthForm_errorText__lWGJq {
+  color: var(--color-error);
+  background-color: rgba(231, 76, 60, 0.1);
+  padding: var(--spacing-md); /* 统一并可能增大内边距 */
+  border-radius: var(--border-radius-sm);
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+  font-size: 0.95rem; /* 从 0.9rem 调整，提高可读性 */
+  border: 1.5px solid rgba(231, 76, 60, 0.3); /* 稍微加粗边框，使其更明显 */
+}
+
+.AuthForm_successText__f3q2q {
+  color: var(--color-success, green); /* 保留 --color-success 的备用值 */
+  background-color: rgba(76, 175, 80, 0.1);
+  padding: var(--spacing-md); /* 与 errorText 统一内边距 */
+  border-radius: var(--border-radius-sm); /* 与 errorText 统一 */
+  margin-bottom: var(--spacing-md); /* 与 errorText 统一 */
+  text-align: center;
+  font-size: 0.95rem; /* 从 0.9rem 调整，提高可读性 */
+  border: 1.5px solid rgba(76, 175, 80, 0.3); /* 稍微加粗边框，使其更明显 */
+}
+
+.AuthForm_switchForm__wYjjY {
+  text-align: center;
+  margin-top: var(--spacing-lg); /* 假设 --spacing-lg 已定义 */
+  font-size: 0.95rem; /* 从 0.9rem 调整，提高可读性 */
+  color: var(--color-secondary-text); /* 假设 --color-secondary-text 已定义 */
+}
+
+.AuthForm_switchForm__wYjjY a {
+  color: var(--color-accent, #007bff); /* 使用 CSS 变量或默认值 */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.AuthForm_switchForm__wYjjY a:hover {
+  text-decoration: underline;
+}

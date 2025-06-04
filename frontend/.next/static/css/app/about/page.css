@@ -1,0 +1,111 @@
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/styles/AboutPage.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+/* filepath: frontend/src/styles/AboutPage.module.css */
+.AboutPage_container__xrjEP {
+  padding: var(--spacing-lg, 24px) var(--spacing-xl, 32px);
+  max-width: var(--max-width, 1280px);
+  margin: 0 auto;
+  color: var(--color-primary-text, #2c3e50);
+}
+
+.AboutPage_header__NdUOZ {
+  text-align: center;
+  margin-bottom: var(--spacing-xl, 32px);
+  padding-bottom: var(--spacing-lg, 24px);
+  border-bottom: 1px solid var(--color-border, #e0e0e0);
+}
+
+.AboutPage_title__ob5oP {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm, 8px);
+}
+
+.AboutPage_tagline__LfAA_ {
+  font-size: 1.2rem;
+  color: var(--color-secondary-text, #7f8c8d);
+}
+
+.AboutPage_section__PE341 {
+  margin-bottom: var(--spacing-xl, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg, 24px);
+  align-items: center;
+}
+
+/* 对于图文左右布局 */
+@media (min-width: 768px) {
+  .AboutPage_section__PE341 {
+    flex-direction: row;
+  }
+  .AboutPage_section__PE341:nth-child(odd) .AboutPage_imageContainer__TAsx2 { /* 奇数行的图片在左 */
+    order: 1;
+  }
+  .AboutPage_section__PE341:nth-child(odd) .AboutPage_textContainer__nWEpe {
+    order: 2;
+  }
+  .AboutPage_section__PE341:nth-child(even) .AboutPage_imageContainer__TAsx2 { /* 偶数行的图片在右 */
+    order: 2;
+  }
+  .AboutPage_section__PE341:nth-child(even) .AboutPage_textContainer__nWEpe {
+    order: 1;
+  }
+  .AboutPage_imageContainer__TAsx2, .AboutPage_textContainer__nWEpe {
+    flex: 1 1;
+  }
+}
+
+
+.AboutPage_imageContainer__TAsx2 {
+  width: 100%;
+  max-width: 450px; /* 控制图片最大宽度 */
+}
+
+.AboutPage_aboutImage__W_fby {
+  border-radius: var(--border-radius-md, 8px);
+  box-shadow: var(--box-shadow-md, 0 4px 6px rgba(0,0,0,0.1));
+  width: 100%;
+  height: auto; /* 保持图片比例 */
+}
+
+.AboutPage_textContainer__nWEpe h2 {
+  font-size: 1.8rem;
+  color: var(--color-accent, #3498db);
+  margin-bottom: var(--spacing-md, 16px);
+  border-bottom: 2px solid var(--color-accent, #3498db);
+  padding-bottom: var(--spacing-sm, 8px);
+  display: inline-block;
+}
+
+.AboutPage_textContainer__nWEpe p, .AboutPage_textContainer__nWEpe ul {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: var(--spacing-md, 16px);
+}
+
+.AboutPage_textContainer__nWEpe ul {
+  list-style: disc;
+  padding-left: var(--spacing-lg, 24px);
+}
+
+.AboutPage_textContainer__nWEpe ul li {
+  margin-bottom: var(--spacing-sm, 8px);
+}
+
+.AboutPage_teamSection__PRCAc {
+  text-align: center;
+  padding: var(--spacing-lg, 24px);
+  background-color: var(--color-surface, #ffffff);
+  border-radius: var(--border-radius-md, 8px);
+  margin-top: var(--spacing-xl, 32px);
+}
+.AboutPage_teamSection__PRCAc h2 {
+  font-size: 2rem;
+  color: var(--color-primary-text, #2c3e50);
+}
+.AboutPage_teamSection__PRCAc a {
+  color: var(--color-accent, #3498db);
+  font-weight: 500;
+}

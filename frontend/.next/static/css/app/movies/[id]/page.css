@@ -1,0 +1,296 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/styles/MovieDetails.module.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************/
+.MovieDetails_container__lGlC0 {
+  padding: var(--spacing-xl);
+  max-width: 960px; /* 详情页可以稍宽一些 */
+  margin: var(--spacing-xl) auto;
+  background-color: var(--color-surface);
+  color: var(--color-primary-text);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow-md);
+}
+
+.MovieDetails_loading__Q4_ni, .MovieDetails_error__tVl3u {
+  text-align: center;
+  padding: var(--spacing-xl);
+  font-size: 1.125rem;
+  color: var(--color-secondary-text);
+}
+
+.MovieDetails_error__tVl3u button {
+  margin-left: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.MovieDetails_error__tVl3u button:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.MovieDetails_movieHeader__fInVK {
+  display: flex;
+  gap: var(--spacing-lg, 20px); /* 海报和信息之间的间距 */
+  margin-bottom: var(--spacing-xl, 30px);
+  align-items: flex-start; /* 顶部对齐 */
+}
+
+/* 新增或修改 .posterContainer */
+.MovieDetails_posterContainer__L6be7 {
+  flex-shrink: 0; /* 防止容器在 flex 布局中被压缩 */
+  width: 250px; /* 固定宽度，您可以根据需要调整 */
+  height: 375px; /* 固定高度，保持常见海报比例，您可以根据需要调整 */
+  background-color: var(--color-surface-alt, #f0f0f0); /* 图片加载时的占位背景色 */
+  border-radius: var(--border-radius-md, 8px);
+  overflow: hidden; /* 确保图片不会超出容器边界 */
+  display: flex; /* 用于内部图片居中（如果图片较小） */
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--box-shadow-sm);
+}
+
+/* 修改 .posterImage (之前可能是 .poster) */
+.MovieDetails_posterImage__WkpRf {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 关键：裁剪图片以填充容器，同时保持宽高比 */
+  display: block; /* 移除图片下方的额外空间 */
+}
+
+.MovieDetails_movieInfo__uiOEA {
+  flex-grow: 1; /* 让信息部分占据剩余空间 */
+  /* 移除或调整 movieInfo 的 padding-left，因为 .movieHeader 的 gap 已经提供了间距 */
+  display: flex;
+  flex-direction: column; /* 让内部元素垂直排列 */
+  /* justify-content: center; */ /* 如果希望内容垂直居中 */
+}
+
+.MovieDetails_title__XayfN {
+  font-size: 2.25rem; /* 36px */
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-primary-text);
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.2;
+  width: 100%; 
+  overflow-wrap: break-word; /* 允许在单词内部换行，如果需要多行但不想溢出 */
+  word-break: break-word; /* 确保长单词也能换行 */
+
+  /* 使用 clamp 动态调整字体大小 */
+  /* clamp(MIN, PREFERRED, MAX) */
+  /* MIN: 最小字体大小，例如 1.5rem */
+  /* PREFERRED: 基于视口宽度的动态大小，例如 5vw (视口宽度的5%) 或 calc(1.5rem + 2vw) */
+  /* MAX: 最大字体大小，例如 2.5rem */
+  font-size: clamp(1.2rem, 4vw, 2.2rem); /* 请根据您的设计调整这些值 */
+
+  /* 如果即使缩小了字体，仍然可能超出，可以考虑结合省略号（但通常 clamp 的目的是避免省略） */
+  /* 如果希望在缩小到最小字体后仍然超长时显示省略号，则需要配合JS或更复杂的CSS */
+}
+
+.MovieDetails_tagline__sEw_2 {
+  font-style: italic;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-secondary-text);
+  font-size: 1.1rem;
+}
+
+.MovieDetails_movieInfo__uiOEA p {
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+.MovieDetails_movieInfo__uiOEA p strong {
+  font-weight: 600;
+  color: var(--color-primary-text);
+}
+
+.MovieDetails_overviewSection__nfpTl,
+.MovieDetails_commentsSection__nHMK_ {
+  margin-bottom: var(--spacing-xl);
+}
+
+.MovieDetails_overviewSection__nfpTl h2,
+.MovieDetails_commentsSection__nHMK_ h2 {
+  font-size: 1.75rem; /* 28px */
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-primary-text);
+  font-weight: 600;
+}
+
+.MovieDetails_commentForm__ppwiw {
+  margin-bottom: var(--spacing-lg);
+}
+
+.MovieDetails_commentForm__ppwiw textarea {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--color-surface);
+  color: var(--color-primary-text);
+  font-size: 1rem;
+  margin-bottom: var(--spacing-md);
+  resize: vertical;
+  min-height: 100px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.MovieDetails_commentForm__ppwiw textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.MovieDetails_commentForm__ppwiw button {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.MovieDetails_commentForm__ppwiw button:hover {
+  background-color: var(--color-accent-hover);
+}
+.MovieDetails_commentForm__ppwiw button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.MovieDetails_commentError__lg8NT {
+  color: var(--color-error);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-sm);
+  background-color: rgba(231, 76, 60, 0.05);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+}
+
+.MovieDetails_loginPrompt__tshVW {
+  margin-bottom: var(--spacing-lg);
+  font-size: 1rem;
+  color: var(--color-secondary-text);
+  padding: var(--spacing-md);
+  background-color: rgba(52, 152, 219, 0.05); /* 浅蓝色背景提示 */
+  border-radius: var(--border-radius-sm);
+  text-align: center;
+}
+.MovieDetails_loginLink__lSu8S {
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.MovieDetails_commentList__NxIiH {
+  list-style: none;
+  padding: 0;
+}
+
+.MovieDetails_commentItem__w1fuu {
+  background-color: var(--color-background); /* 评论使用稍有区别的背景 */
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  margin-bottom: var(--spacing-md);
+  border: 1px solid var(--color-border);
+}
+
+.MovieDetails_commentHeader__PBa2v {
+  display: flex;
+  justify-content: space-between; /* 让 meta 和按钮分布在两端 */
+  align-items: center;
+  margin-bottom: var(--spacing-xs, 0.25rem); /* 头部和评论文本之间的间距 */
+}
+
+.MovieDetails_commentMeta__FaI7t {
+  font-size: 0.875rem; /* 14px */
+  color: var(--color-secondary-text);
+  margin-bottom: 0; /* 从 .commentHeader 继承间距 */
+}
+.MovieDetails_commentMeta__FaI7t strong {
+  color: var(--color-primary-text);
+  font-weight: 500;
+}
+
+.MovieDetails_deleteCommentButton__g5PZk {
+  background-color: transparent;
+  color: var(--color-error, #e74c3c);
+  border: 1px solid var(--color-error-light, #f5b7b1);
+  padding: var(--spacing-xxs, 0.25rem) var(--spacing-xs, 0.5rem);
+  border-radius: var(--border-radius-sm, 3px);
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.MovieDetails_deleteCommentButton__g5PZk:hover {
+  background-color: var(--color-error-light, #f5b7b1);
+  color: var(--color-error-dark, #c0392b);
+}
+
+/* ... (rest of your styles) ... */
+
+.MovieDetails_favoriteButton__KWUqd {
+  background-color: transparent;
+  border: 2px solid var(--color-accent, #3498db);
+  color: var(--color-accent, #3498db);
+  width: 40px; /* 设置固定宽度 */
+  height: 40px; /* 设置固定高度，使其成为方形 */
+  padding: 0; /* 移除内边距，因为我们将居中内容 */
+  border-radius: var(--border-radius-sm, 5px); /* 可以调整为更圆的边角或方形 */
+  cursor: pointer;
+  font-size: 1.2rem; /* 调整图标大小 */
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+  margin-top: 10px; /* 与上方元素的间距 */
+  display: inline-flex; /* 使用 flex 布局居中内容 */
+  align-items: center;
+  justify-content: center;
+  /* gap: 0; /* 如果只有图标，不需要 gap */
+}
+
+.MovieDetails_favoriteButton__KWUqd:hover:not(:disabled) {
+  background-color: var(--color-accent-hover, #2980b9);
+  color: white;
+  transform: scale(1.05);
+}
+
+.MovieDetails_favoriteButton__KWUqd:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.MovieDetails_favoriteButton__KWUqd.MovieDetails_favorited__j8jNT {
+  background-color: var(--color-accent, #3498db);
+  color: white;
+  border-color: var(--color-accent, #3498db);
+}
+
+.MovieDetails_errorTextSmall__xlemM { /* 用于收藏错误等小提示 */
+  color: var(--color-error, #e74c3c);
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .MovieDetails_movieHeader__fInVK {
+    flex-direction: column;
+    align-items: center; /* 在移动端，让海报和信息都居中 */
+    text-align: center;
+  }
+  .MovieDetails_posterContainer__L6be7 { /* 调整移动端的海报容器大小 */
+    width: 200px; /* 或者使用百分比，例如 width: 60%; max-width: 250px; */
+    /* aspect-ratio 会自动调整高度 */
+    margin-bottom: var(--spacing-md); /* 确保与下方内容有间距 */
+  }
+  .MovieDetails_movieInfo__uiOEA {
+    align-items: center; /* 移动端信息部分也居中对齐内部元素 */
+  }
+}

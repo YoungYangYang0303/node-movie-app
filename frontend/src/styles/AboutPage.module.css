@@ -1,0 +1,108 @@
+/* filepath: frontend/src/styles/AboutPage.module.css */
+.container {
+  padding: var(--spacing-lg, 24px) var(--spacing-xl, 32px);
+  max-width: var(--max-width, 1280px);
+  margin: 0 auto;
+  color: var(--color-primary-text, #2c3e50);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl, 32px);
+  padding-bottom: var(--spacing-lg, 24px);
+  border-bottom: 1px solid var(--color-border, #e0e0e0);
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm, 8px);
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: var(--color-secondary-text, #7f8c8d);
+}
+
+.section {
+  margin-bottom: var(--spacing-xl, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg, 24px);
+  align-items: center;
+}
+
+/* 对于图文左右布局 */
+@media (min-width: 768px) {
+  .section {
+    flex-direction: row;
+  }
+  .section:nth-child(odd) .imageContainer { /* 奇数行的图片在左 */
+    order: 1;
+  }
+  .section:nth-child(odd) .textContainer {
+    order: 2;
+  }
+  .section:nth-child(even) .imageContainer { /* 偶数行的图片在右 */
+    order: 2;
+  }
+  .section:nth-child(even) .textContainer {
+    order: 1;
+  }
+  .imageContainer, .textContainer {
+    flex: 1;
+  }
+}
+
+
+.imageContainer {
+  width: 100%;
+  max-width: 450px; /* 控制图片最大宽度 */
+}
+
+.aboutImage {
+  border-radius: var(--border-radius-md, 8px);
+  box-shadow: var(--box-shadow-md, 0 4px 6px rgba(0,0,0,0.1));
+  width: 100%;
+  height: auto; /* 保持图片比例 */
+}
+
+.textContainer h2 {
+  font-size: 1.8rem;
+  color: var(--color-accent, #3498db);
+  margin-bottom: var(--spacing-md, 16px);
+  border-bottom: 2px solid var(--color-accent, #3498db);
+  padding-bottom: var(--spacing-sm, 8px);
+  display: inline-block;
+}
+
+.textContainer p, .textContainer ul {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: var(--spacing-md, 16px);
+}
+
+.textContainer ul {
+  list-style: disc;
+  padding-left: var(--spacing-lg, 24px);
+}
+
+.textContainer ul li {
+  margin-bottom: var(--spacing-sm, 8px);
+}
+
+.teamSection {
+  text-align: center;
+  padding: var(--spacing-lg, 24px);
+  background-color: var(--color-surface, #ffffff);
+  border-radius: var(--border-radius-md, 8px);
+  margin-top: var(--spacing-xl, 32px);
+}
+.teamSection h2 {
+  font-size: 2rem;
+  color: var(--color-primary-text, #2c3e50);
+}
+.teamSection a {
+  color: var(--color-accent, #3498db);
+  font-weight: 500;
+}

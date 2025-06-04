@@ -1,0 +1,32 @@
+/* filepath: frontend/src/styles/SearchInput.module.css */
+.searchForm {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 2rem;
+  align-items: center;
+  justify-content: center; /* 居中搜索框 */
+}
+
+.searchInput {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  flex-grow: 1;
+  max-width: 400px; /* 限制最大宽度 */
+}
+
+.searchButton {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-accent, #007bff);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.searchButton:hover {
+  background-color: var(--color-accent-dark, #0056b3);
+}
